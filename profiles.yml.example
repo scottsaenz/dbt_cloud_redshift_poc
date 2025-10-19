@@ -1,0 +1,28 @@
+dbt_cloud_redshift_poc:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: your-cluster-name.region.redshift.amazonaws.com
+      user: your_username
+      password: your_password
+      port: 5439
+      dbname: your_database
+      schema: public
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 10
+      search_path: public
+      
+    prod:
+      type: redshift
+      host: your-cluster-name.region.redshift.amazonaws.com
+      user: your_username
+      password: your_password
+      port: 5439
+      dbname: your_database
+      schema: public
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 10
+      search_path: public
